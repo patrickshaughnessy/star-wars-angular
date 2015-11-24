@@ -1,5 +1,20 @@
 <h1>{{title}}</h1>
 
+<nav>
+  <ul class="pagination">
+    <li ng-class="{disabled: page === 1}">
+      <a aria-label="Previous" ng-click="getPreviousPage()">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-class="{disabled: page === 7}">
+      <a aria-label="Next" ng-click="getNextPage()">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 <ul>
   <li ng-repeat="planet in planets">
     {{planet.name}}
