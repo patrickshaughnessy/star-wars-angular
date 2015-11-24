@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li ng-repeat="planet in planets">
+    {{planet.name}}
+    <ul>
+      <li ng-repeat="resident in planet.residents">
+        <a ui-sref="resident({id: resident.id})">
+          Resident {{residents[resident.id].name || resident.id}}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
